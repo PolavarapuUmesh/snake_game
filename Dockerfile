@@ -1,7 +1,5 @@
-FROM python:3.9
-WORKDIR /app
-COPY requirements.txt .
+FROM python:3.9-slim
+WORKDIR /home
 RUN pip install pygame
 COPY . .
-CMD ["python", "snake.py"]
-
+CMD ["python", "main.py"]
